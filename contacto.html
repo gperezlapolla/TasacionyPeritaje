@@ -66,118 +66,76 @@
         .info-text p, .info-text a { color: #555; text-decoration: none; font-size: 1.05em; }
         .info-text a:hover { color: #c59d5f; }
 
-    /* =========================================
-   FORMULARIO "GRAN FORMATO" - PERITO JUDICIAL
-   ========================================= */
+        /* FORMULARIO */
+        .contact-form-wrapper {
+            flex: 1.5;
+            min-width: 400px;
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-top: 6px solid #c59d5f;
+            animation: fadeInUp 0.8s ease-out;
+        }
 
-/* El contenedor principal */
-.contact-form-wrapper {
-    flex: 1.5; /* Le damos más ancho relativo a la columna del formulario */
-    min-width: 400px;
-    background: white;
-    padding: 50px; /* Más espacio interno */
-    border-radius: 8px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    border-top: 6px solid #c59d5f; /* Borde dorado más grueso */
-}
+        .form-group { 
+            margin-bottom: 30px;
+        }
 
-.form-group { 
-    margin-bottom: 30px; /* Más aire entre cada pregunta */
-}
+        .form-group label {
+            display: block;
+            margin-bottom: 12px;
+            color: #111;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
 
-/* ETIQUETAS (LABELS) */
-.form-group label {
-    display: block;
-    margin-bottom: 12px;
-    color: #111; /* Negro absoluto para contraste */
-    font-weight: 800; /* Letra gruesa */
-    text-transform: uppercase; /* FORZAR MAYÚSCULAS */
-    letter-spacing: 1px; /* Separación entre letras para elegancia */
-    font-size: 0.9em;
-}
+        .form-control {
+            width: 100%;
+            padding: 18px 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.1em;
+            font-family: inherit;
+            transition: 0.3s;
+            background-color: #fdfdfd;
+        }
 
-/* LOS CAMPOS (INPUTS) */
-.form-control {
-    width: 100%;
-    padding: 18px 20px; /* Mucho más "gorditos" y cómodos */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.1em; /* Letra más grande al escribir */
-    font-family: inherit;
-    transition: 0.3s;
-    background-color: #fdfdfd;
-}
+        .form-control:focus {
+            border-color: #c59d5f;
+            background-color: #fff;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(197, 157, 95, 0.1);
+        }
 
-/* EFECTO AL HACER CLIC */
-.form-control:focus {
-    border-color: #c59d5f; /* Borde dorado */
-    background-color: #fff;
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(197, 157, 95, 0.1); /* Resplandor suave */
-}
+        textarea.form-control {
+            min-height: 200px;
+            resize: vertical;
+        }
 
-/* CAMPO DE MENSAJE GIGANTE */
-textarea.form-control {
-    min-height: 250px; /* Altura mínima forzada */
-    resize: vertical; /* Permite estirar solo hacia abajo */
-}
-
-/* BOTÓN DE ENVIAR */
-.btn-submit {
-    background-color: #111;
-    color: white;
-    border: none;
-    padding: 20px 40px; /* Botón más grande */
-    font-size: 1.1em;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 10px;
-}
-
-.btn-submit:hover {
-    background-color: #c59d5f;
-    color: #000;
-    transform: translateY(-2px);
-}
-.btn-submit:hover {
-    background: #c59d5f; /* Dorado al pasar el mouse */
-    color: #000;
-    transform: translateY(-3px); /* Se eleva un poco */
-    box-shadow: 0 10px 20px rgba(197, 157, 95, 0.4); /* Sombra dorada */
-}
-
-/* Pequeña animación de entrada */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.contact-form-wrapper {
-    animation: fadeInUp 0.8s ease-out;
-}
         .btn-submit {
             background-color: #111;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1em;
+            padding: 20px 40px;
+            font-size: 1.1em;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
             transition: 0.3s;
             width: 100%;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            margin-top: 10px;
         }
 
         .btn-submit:hover {
             background-color: #c59d5f;
             color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(197, 157, 95, 0.4);
         }
 
         /* BOTÓN ESPECIAL WHATSAPP */
@@ -187,8 +145,12 @@ textarea.form-control {
             font-weight: bold;
         }
         .whatsapp-btn .info-icon { background: white; color: #25D366; }
-        .whatsapp-btn:hover { background-color: #128C7E; border-color: #128C7E; color: white !important;}
+        .whatsapp-btn:hover { background-color: #128C7E; border-color: #128C7E; }
 
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -209,12 +171,12 @@ textarea.form-control {
                 <li><a href="peritaje.html">PERITAJE JUDICIAL</a></li>
                 <li><a href="tasacion.html">TASACIÓN ACTIVOS</a></li>
                 <li><a href="sobre-mi.html">SOBRE MI</a></li>
-                <li><a href="contacto.html" style="color: #ff9900;">CONTACTO</a></li>
+                <li><a href="contacto.html" style="color: #c59d5f;">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main-content" style="display: block;">
+    <main class="main-content">
 
         <section class="page-header">
             <h1>Contacto Directo</h1>
@@ -238,10 +200,12 @@ textarea.form-control {
                     <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
                     <div class="info-text">
                         <h4>Teléfono / Móvil</h4>
-                        <a href="tel:+56912345678">+56 9 XXXX XXXX</a> </div>
+                        <a href="tel:+56912345678">+56 9 XXXX XXXX</a> 
+                    </div>
                 </div>
 
-                <a href="https://wa.me/569XXXXXXXX" target="_blank" style="text-decoration: none;"> <div class="info-item whatsapp-btn">
+                <a href="https://wa.me/569XXXXXXXX" target="_blank" style="text-decoration: none;"> 
+                    <div class="info-item whatsapp-btn">
                         <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
                         <div class="info-text">
                             <h4 style="color: white;">WhatsApp Directo</h4>
@@ -254,7 +218,8 @@ textarea.form-control {
                     <div class="info-icon"><i class="fab fa-linkedin-in"></i></div>
                     <div class="info-text">
                         <h4>Perfil Profesional</h4>
-                        <a href="#" target="_blank">Ver perfil en LinkedIn</a> </div>
+                        <a href="#" target="_blank">Ver perfil en LinkedIn</a> 
+                    </div>
                 </div>
             </div>
 
@@ -264,7 +229,7 @@ textarea.form-control {
                     Complete el formulario para solicitar una cotización formal o coordinar una reunión técnica.
                 </p>
 
-               <form id="formulario-presupuesto" action="mailto:guille.perez.lapolla@gmail.com" method="GET">
+                <form action="mailto:guille.perez.lapolla@gmail.com" method="post" enctype="text/plain">
                     <div class="form-group">
                         <label for="nombre">Nombre Completo</label>
                         <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Su nombre" required>
@@ -286,7 +251,7 @@ textarea.form-control {
 
                     <div class="form-group">
                         <label for="mensaje">Detalle del Requerimiento</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" class="form-control" placeholder="Describa brevemente lo que necesita..." required></textarea>
+                        <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Describa brevemente lo que necesita..." required></textarea>
                     </div>
 
                     <button type="submit" class="btn-submit">ENVIAR CONSULTA</button>
