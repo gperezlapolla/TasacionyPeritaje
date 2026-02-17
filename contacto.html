@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Tasación y Peritaje Judicial</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Estilos específicos para CONTACTO */
+        .page-header {
+            background-color: #111;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid #c59d5f;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            gap: 50px;
+        }
+
+        /* COLUMNA IZQUIERDA: INFORMACIÓN */
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+        
+        .info-item:hover {
+            border-color: #c59d5f;
+            transform: translateX(5px);
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: #111;
+            color: #c59d5f;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            margin-right: 20px;
+        }
+
+        .info-text h4 { margin-bottom: 5px; color: #111; }
+        .info-text p, .info-text a { color: #555; text-decoration: none; font-size: 1.05em; }
+        .info-text a:hover { color: #c59d5f; }
+
+    /* =========================================
+   FORMULARIO "GRAN FORMATO" - PERITO JUDICIAL
+   ========================================= */
+
+/* El contenedor principal */
+.contact-form-wrapper {
+    flex: 1.5; /* Le damos más ancho relativo a la columna del formulario */
+    min-width: 400px;
+    background: white;
+    padding: 50px; /* Más espacio interno */
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-top: 6px solid #c59d5f; /* Borde dorado más grueso */
+}
+
+.form-group { 
+    margin-bottom: 30px; /* Más aire entre cada pregunta */
+}
+
+/* ETIQUETAS (LABELS) */
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    color: #111; /* Negro absoluto para contraste */
+    font-weight: 800; /* Letra gruesa */
+    text-transform: uppercase; /* FORZAR MAYÚSCULAS */
+    letter-spacing: 1px; /* Separación entre letras para elegancia */
+    font-size: 0.9em;
+}
+
+/* LOS CAMPOS (INPUTS) */
+.form-control {
+    width: 100%;
+    padding: 18px 20px; /* Mucho más "gorditos" y cómodos */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.1em; /* Letra más grande al escribir */
+    font-family: inherit;
+    transition: 0.3s;
+    background-color: #fdfdfd;
+}
+
+/* EFECTO AL HACER CLIC */
+.form-control:focus {
+    border-color: #c59d5f; /* Borde dorado */
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(197, 157, 95, 0.1); /* Resplandor suave */
+}
+
+/* CAMPO DE MENSAJE GIGANTE */
+textarea.form-control {
+    min-height: 250px; /* Altura mínima forzada */
+    resize: vertical; /* Permite estirar solo hacia abajo */
+}
+
+/* BOTÓN DE ENVIAR */
+.btn-submit {
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 20px 40px; /* Botón más grande */
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #c59d5f;
+    color: #000;
+    transform: translateY(-2px);
+}
+.btn-submit:hover {
+    background: #c59d5f; /* Dorado al pasar el mouse */
+    color: #000;
+    transform: translateY(-3px); /* Se eleva un poco */
+    box-shadow: 0 10px 20px rgba(197, 157, 95, 0.4); /* Sombra dorada */
+}
+
+/* Pequeña animación de entrada */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-form-wrapper {
+    animation: fadeInUp 0.8s ease-out;
+}
+        .btn-submit {
+            background-color: #111;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-submit:hover {
+            background-color: #c59d5f;
+            color: #000;
+        }
+
+        /* BOTÓN ESPECIAL WHATSAPP */
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white !important;
+            font-weight: bold;
+        }
+        .whatsapp-btn .info-icon { background: white; color: #25D366; }
+        .whatsapp-btn:hover { background-color: #128C7E; border-color: #128C7E; color: white !important;}
+
+    </style>
+</head>
+<body>
+
+    <div class="accreditation-bar">
+        <p>
+            <span class="icon">⚖️</span> 
+            Perito Judicial Designado: Iltmas. Cortes de Apelaciones de 
+            <strong>La Serena, Valparaíso, Santiago, San Miguel, Rancagua y Talca</strong>
+        </p>
+    </div>
+
+    <header>
+        <nav class="main-nav">
+            <a href="index.html" class="logo">TASACIÓN Y PERITAJE</a>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="peritaje.html">PERITAJE JUDICIAL</a></li>
+                <li><a href="tasacion.html">TASACIÓN ACTIVOS</a></li>
+                <li><a href="sobre-mi.html">SOBRE MI</a></li>
+                <li><a href="contacto.html" style="color: #ff9900;">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content" style="display: block;">
+
+        <section class="page-header">
+            <h1>Contacto Directo</h1>
+            <p style="color: #ccc; margin-top: 10px;">Canales de comunicación oficiales para consultas técnicas y legales</p>
+        </section>
+
+        <div class="contact-container">
+            
+            <div class="contact-info">
+                <h2 style="margin-bottom: 25px;">Información de Contacto</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h4>Correo Electrónico</h4>
+                        <a href="mailto:CONTACTO@TASACIONYPERITAJES.COM">CONTACTO@TASACIONYPERITAJES.COM</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info-text">
+                        <h4>Teléfono / Móvil</h4>
+                        <a href="tel:+56912345678">+56 9 XXXX XXXX</a> </div>
+                </div>
+
+                <a href="https://wa.me/569XXXXXXXX" target="_blank" style="text-decoration: none;"> <div class="info-item whatsapp-btn">
+                        <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="info-text">
+                            <h4 style="color: white;">WhatsApp Directo</h4>
+                            <p style="color: white; opacity: 0.9;">Click para chatear ahora</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="info-text">
+                        <h4>Perfil Profesional</h4>
+                        <a href="#" target="_blank">Ver perfil en LinkedIn</a> </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h2 style="margin-bottom: 20px;">Envíe su requerimiento</h2>
+                <p style="margin-bottom: 30px; color: #666; font-size: 0.95em;">
+                    Complete el formulario para solicitar una cotización formal o coordinar una reunión técnica.
+                </p>
+
+                <form action="#" method="POST"> 
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Su nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="ejemplo@empresa.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto" class="form-control">
+                            <option value="Peritaje Judicial">Consulta por Peritaje Judicial</option>
+                            <option value="Tasación Activos">Cotización Tasación de Activos</option>
+                            <option value="Otro">Otro motivo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Detalle del Requerimiento</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" class="form-control" placeholder="Describa brevemente lo que necesita..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">ENVIAR CONSULTA</button>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-email-area">Email: <a href="mailto:CONTACTO@TASACIONYPERITAJES.COM">CONTACTO@TASACIONYPERITAJES.COM</a></div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright-text">&copy; 2026 Tasación y Peritaje. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
